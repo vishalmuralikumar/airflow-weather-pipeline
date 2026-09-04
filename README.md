@@ -238,29 +238,6 @@ SQL concepts implemented include:
 
 These queries were used to analyze weather trends and identify temperature patterns.
 
-## Power BI
-
-The PostgreSQL weather dataset is connected to Power BI for visualization.
-
-The dashboard includes analytical components such as:
-
-- Temperature KPI
-- Humidity KPI
-- Wind Speed KPI
-- Temperature trend
-- Humidity trend
-- Wind speed trend
-- Date/time filtering
-- Dynamic aggregation selection
-
-A dynamic aggregation slicer allows the user to switch between:
-
-- Average
-- Minimum
-- Maximum
-
-This makes the dashboard more interactive and demonstrates practical Power BI modelling and DAX usage.
-
 ## Docker Architecture
 
 The Airflow environment runs using Docker Compose.
@@ -276,6 +253,10 @@ Main services include:
 - Redis
 
 Docker provides a reproducible environment for running the pipeline.
+
+
+## Author name
+Vishal
 
 ## Project Structure
 
