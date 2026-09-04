@@ -1,0 +1,32 @@
+name: Weather Pipeline CI
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  validate-python:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          pip install pandas requests
+
+      - name: Check Python files
+        run: |
+          python -m py_compile scripts/extract_weather.py
+          python -m py_compile scripts/transform_weather.py
+          python -m py_compile scripts/validate_weather.py
